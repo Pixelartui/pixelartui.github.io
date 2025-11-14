@@ -4,7 +4,8 @@ import { useMDXComponents as getThemeComponents } from "nextra-theme-docs"; // n
 const themeComponents = getThemeComponents();
 
 // Merge components
-export function useMDXComponents(components) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useMDXComponents(components = {}) {
     return {
         ...themeComponents,
         ...components,
