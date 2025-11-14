@@ -13,6 +13,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
         route: pathname,
     });
 
+    console.log("Navbar", topLevelNavbarItems);
     return (
         <ul
             style={{
