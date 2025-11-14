@@ -1,9 +1,5 @@
-import type { FC } from "react";
+import { Footer } from "nextra-theme-docs";
 
-export const Footer: FC = () => {
-    return (
-        <footer className="h-50 bg-[#bae1ff] flex justify-center items-center">
-            Powered by Nextra {new Date().getFullYear()}
-        </footer>
-    );
+export const FooterComponent = () => {
+    return <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>;
 };
