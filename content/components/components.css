@@ -1,0 +1,15 @@
+.cp-button-container,
+.cp-box-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.cp-dark-bg {
+    background-color: black;
+    padding: 10px;
+}
+
+.cp-box-content {
+    padding: 5px;
+}

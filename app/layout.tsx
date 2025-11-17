@@ -36,9 +36,10 @@ export default async function RootLayout({
                     banner={banner}
                     navbar={<NavbarComponent />}
                     pageMap={await getPageMap()}
-                    docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+                    docsRepositoryBase="https://github.com/Pixelartui/pixelartui.github.io"
                     footer={<FooterComponent />}
                     editLink={false}
+                    darkMode={true}
                     // ... Your additional layout options
                 >
                     {children}

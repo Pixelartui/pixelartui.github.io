@@ -1,0 +1,113 @@
+import { Box, mockFunction } from "../../lib/pixelartui";
+
+# Box
+
+The Box component is a foundational PixelartUI layout element designed to structure and group content within a pixel-art styled interface.
+It provides flexible styling options such as custom colors, dimensions, and layout behavior while maintaining the distinctive retro aesthetic that defines PixelartUI.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<Box>
+    <div class="cp-box-content">Box Content</div>
+</Box>
+```tsx
+<Box>
+    <div class="cp-box-content">Box Content</div>
+</Box>
+```
+
+### Box Custom Colour
+
+---
+
+<Box backgroundColor="#05EB57">
+    <div class="cp-box-content">Custom Colour</div>
+</Box>
+```tsx
+<Box backgroundColor="#05EB57">
+    <div class="cp-box-content">Custom Colou</div>
+</Box>
+```
+
+### Box Style
+
+---
+
+<div className="cp-box-container">
+    <Box>
+        <div class="cp-box-content">Dark Box</div>
+    </Box>
+
+    <div class="cp-dark-bg">
+        <Box boxStyle="light">
+            <div class="cp-box-content">Light Box</div>
+        </Box>
+    </div>
+
+</div>
+
+```tsx
+    <Box>
+        <div class="cp-box-content">Dark Box</div>
+    </Box>
+
+    <div class="cp-dark-bg">
+        <Box boxStyle="light">
+            <div class="cp-box-content">Light Box</div>
+        </Box>
+    </div>
+```
+
+### Box Custom size
+
+---
+
+<div className="cp-box-container">
+    <Box
+        width="400px"
+        height="200px"    
+    >
+        <div class="cp-box-content">Custom Size</div>
+    </Box>
+
+</div>
+
+```tsx
+<div className="cp-box-container">
+    <Box width="400px" height="200px">
+        <div class="cp-box-content">Dark Box</div>
+    </Box>
+</div>
+```
+
+### Box Custom size
+
+---
+
+<Box fullwidth>
+    <div class="cp-box-content">Full width</div>
+</Box>
+
+```tsx
+<Box fullwidth>
+    <div class="cp-box-content">Full width</div>
+</Box>
+```
+
+## 🔧 Props
+
+| Prop                  | Type        | Default     | Description                                              |
+| --------------------- | ----------- | ----------- | -------------------------------------------------------- |
+| **`children`**        | `ReactNode` | —           | Content to be rendered inside the Box.                   |
+| **`backgroundColor`** | `string`    | `undefined` | Sets a custom background color for the Box.              |
+| **`className`**       | `string`    | `undefined` | Adds additional CSS classes for custom styling.          |
+| **`boxStyle`**        | `BoxStyle`  | `undefined` | Applies a predefined PixelartUI box style or theme.      |
+| **`width`**           | `string`    | `undefined` | Sets a custom width (e.g., `"200px"`, `"100%"`).         |
+| **`height`**          | `string`    | `undefined` | Sets a custom height.                                    |
+| **`fullwidth`**       | `boolean`   | `false`     | Makes the Box expand to fill the width of its container. |

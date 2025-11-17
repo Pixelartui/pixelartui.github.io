@@ -1,0 +1,292 @@
+import { Button, mockFunction } from "../../lib/pixelartui";
+
+# Button
+
+The **Button** component is a core PixelartUI UI element that provides a pixel-art styled interactive control.  
+It supports multiple style, sizes, and types to fit different use cases while preserving the retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Main"
+    onClick={mockFunction}
+/>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Main"
+    onClick={mockFunction}
+/>
+```
+
+### Button Types
+
+---
+
+<div className="cp-button-container">
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Main"
+        onClick={mockFunction}
+    />
+
+    <Button
+    buttonSize="medium"
+    buttonType="outline"
+    text="Outline"
+    onClick={mockFunction}
+
+/>
+
+</div>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Main"
+    onClick={mockFunction}
+/>
+
+<Button
+    buttonSize="medium"
+    buttonType="outline"
+    text="Outline"
+    onClick={mockFunction}
+/>
+```
+
+### Button Sizes
+
+---
+
+<div className="cp-button-container">
+    <Button
+        buttonSize="small"
+        buttonType="main"
+        text="Small"
+        onClick={mockFunction}
+    />
+
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Medium"
+        onClick={mockFunction}
+
+    />
+
+    <Button
+        buttonSize="large"
+        buttonType="main"
+        text="Large"
+        onClick={mockFunction}
+
+    />
+
+</div>
+
+```tsx
+    <Button
+        buttonSize="small"
+        buttonType="main"
+        text="Small"
+        onClick={mockFunction}
+    />
+
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Medium"
+        onClick={mockFunction}
+    />
+
+    <Button
+        buttonSize="large"
+        buttonType="main"
+        text="Large"
+        onClick={mockFunction}
+    />
+```
+
+### Button Styles
+
+---
+
+<div className="cp-button-container">
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        buttonStyle="dark"
+        text="Dark"
+        onClick={mockFunction}
+    />
+
+    <div className="cp-dark-bg">
+        <Button
+            buttonSize="medium"
+            buttonType="main"
+            buttonStyle="light"
+            text="Light"
+            onClick={mockFunction}
+        />
+    </div>
+
+</div>
+
+```tsx
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        buttonStyle="dark"
+        text="Dark"
+        onClick={mockFunction}
+    />
+
+    <Button
+        buttonSize="medium"
+        buttonType="outline"
+        buttonStyle="light"
+        text="Light"
+        onClick={mockFunction}
+    />
+```
+
+### Button Fullwidth
+
+---
+
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Fullwidth"
+    onClick={mockFunction}
+    fullwidth
+/>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Fullwidth"
+    onClick={mockFunction}
+    fullwidth
+/>
+```
+
+### Button Round
+
+---
+
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Round"
+    onClick={mockFunction}
+    round
+/>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Round"
+    onClick={mockFunction}
+    round
+/>
+```
+
+### Button Disabled
+
+---
+
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Round"
+    onClick={mockFunction}
+    disabled
+/>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Round"
+    onClick={mockFunction}
+    disabled
+/>
+```
+
+### Button Custom Color
+
+---
+
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="New Color"
+    onClick={mockFunction}
+    backgroundColor="#05EB57"
+/>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="New Color"
+    onClick={mockFunction}
+    backgroundColor="#05EB57"
+/>
+```
+
+### Button Custom Size
+
+---
+
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Custom Size"
+    width="300px"
+    height="200px"
+    onClick={mockFunction}
+/>
+
+```tsx
+<Button
+    buttonSize="medium"
+    buttonType="main"
+    text="Custom Size"
+    width="300px"
+    height="200px"
+    onClick={mockFunction}
+/>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                             | Default     | Description                                                                                                |
+| --------------------- | -------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------- |
+| **`type`**            | `"main" \| "outline"`            | `"main"`    | Determines the button’s visual style, switching between a solid primary appearance or an outlined variant. |
+| **`size`**            | `"small" \| "medium" \| "large"` | `"medium"`  | Controls the button’s overall scale, adjusting padding and font size.                                      |
+| **`style`**           | `"dark" \| "light"`              | `"dark"`    | Applies a light or dark theme to the button’s visual design.                                               |
+| **`fullwidth`**       | `boolean`                        | `false`     | Makes the button expand to fill the width of its container.                                                |
+| **`round`**           | `boolean`                        | `false`     | Renders the button with fully rounded (pill-shaped) corners.                                               |
+| **`backgroundColor`** | `string`                         | `undefined` | Overrides the default background color with a custom value.                                                |
+| **`disabled`**        | `boolean`                        | `false`     | Disables interaction and visually indicates that the button is inactive.                                   |
+| **`width`**           | `string`                         | `undefined` | Sets a custom width for the button (e.g., `"200px"` or `"50%"`).                                           |
+| **`height`**          | `string`                         | `undefined` | Sets a custom height for the button.                                                                       |
+| **`className`**       | `string`                         | `undefined` | Adds additional CSS classes for custom styling.                                                            |
+| **`onClick`**         | `() => void`                     | —           | Function executed when the button is clicked.                                                              |
