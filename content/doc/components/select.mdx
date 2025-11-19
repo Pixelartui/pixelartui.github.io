@@ -1,0 +1,403 @@
+import { Select } from "../../lib/pixelartui";
+import {
+    BasicDemo,
+    SelectType,
+    SelectNoLabel,
+    SelectCustomSize,
+    SelectFullwidth,
+    SelectDisabled,
+    SelectError,
+    SelectCustomColor,
+    SelectStyle,
+} from "../../../app/_components/selectDemo";
+
+# Select
+
+The **Select** component provides a pixel-art styled dropdown input for choosing from a list of options.  
+Designed to fit seamlessly into the retro aesthetic of PixelartUI, it supports labels, helper text, error states, and customizable styles.  
+With flexible sizing, themes, and interactive behavior, the Select component offers a consistent and expressive way to present menus and option lists.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<BasicDemo />
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+/>
+```
+
+### Select Type
+
+---
+
+<SelectType />
+
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+/>
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="inline"
+/>
+```
+
+### Select No Label
+
+---
+
+<SelectNoLabel />
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    noLabel
+/>
+```
+
+### Select custom size
+
+---
+
+<SelectCustomSize />
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    width="700px"
+    height="150px"
+
+/>
+
+````
+
+### Select fullwidth
+
+---
+
+<SelectFullwidth />
+
+```tsx
+
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    fullwidth
+/>
+
+````
+
+### Select disabled
+
+---
+
+<SelectDisabled />
+
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    disabled
+/>
+```
+
+### Select error
+
+---
+
+<SelectError />
+
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    error
+/>
+```
+
+### Select custom color
+
+---
+
+<SelectCustomColor />
+
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    backgroundColor="#b13737"
+/>
+```
+
+### Select styles
+
+---
+
+<SelectStyle />
+
+```tsx
+<Select
+    display="Vehicle"
+    options={[
+        {
+            label: "Car",
+            value: "car",
+        },
+        {
+            label: "Lorry",
+            value: "lorry",
+        },
+        {
+            label: "Bike",
+            value: "bike",
+        },
+        {
+            label: "Motorbike",
+            value: "motorbike",
+        },
+    ]}
+    selectLabel="My Select"
+    selectName="my-select"
+    type="main"
+    selectStyle="dark"
+/>
+<div className="cp-dark-bg">
+    <Select
+        display="Vehicle"
+        options={[
+            {
+                label: "Car",
+                value: "car",
+            },
+            {
+                label: "Lorry",
+                value: "lorry",
+            },
+            {
+                label: "Bike",
+                value: "bike",
+            },
+            {
+                label: "Motorbike",
+                value: "motorbike",
+            },
+        ]}
+        selectLabel="My Select"
+        selectName="my-select"
+        type="main"
+        selectStyle="light"
+    />
+</div>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                            | Default     | Description                                                                 |
+| --------------------- | --------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------- |
+| **`type`**            | `SelectType`                                                    | —           | Determines the Select’s visual and interaction style.                       |
+| **`backgroundColor`** | `string`                                                        | `undefined` | Sets a custom background color for the Select container.                    |
+| **`options`**         | `SelectOption[]`                                                | —           | List of selectable options displayed in the dropdown.                       |
+| **`display`**         | `string`                                                        | —           | The text shown when no option is selected or for the current display label. |
+| **`selectName`**      | `string`                                                        | —           | A unique name identifier for the Select input.                              |
+| **`selectLabel`**     | `string`                                                        | —           | Label text displayed above the Select component.                            |
+| **`noLabel`**         | `boolean`                                                       | `false`     | Hides the label when set to `true`.                                         |
+| **`disabled`**        | `boolean`                                                       | `false`     | Disables the Select input and visually signals inactivity.                  |
+| **`error`**           | `boolean`                                                       | `false`     | Displays the Select in an error state.                                      |
+| **`className`**       | `string`                                                        | `undefined` | Adds additional CSS classes for custom styling.                             |
+| **`selectStyle`**     | `SelectStyle`                                                   | `undefined` | Applies a predefined PixelartUI style or theme to the Select component.     |
+| **`width`**           | `string`                                                        | `undefined` | Sets a custom width (e.g., `"200px"`, `"100%"`).                            |
+| **`height`**          | `string`                                                        | `undefined` | Sets a custom height for the Select.                                        |
+| **`fullwidth`**       | `boolean`                                                       | `false`     | Expands the Select to fill the width of its container.                      |
+| **`onChange`**        | `(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void` | `undefined` | Callback fired when an option is clicked / selected.                        |
+
+```
+
+```

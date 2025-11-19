@@ -4,6 +4,8 @@ import { getPageMap } from "nextra/page-map";
 import { NavbarComponent } from "./_components/navbar";
 import "nextra-theme-docs/style.css";
 import { FooterComponent } from "./_components/footer";
+import "@fontsource/pixelify-sans";
+import "./globals.css";
 
 export const metadata = {
     // Define your metadata here

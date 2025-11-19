@@ -1,4 +1,4 @@
-import { Box, mockFunction } from "../../lib/pixelartui";
+import { Box, mockFunction } from "../../../lib/pixelartui";
 
 # Box
 
@@ -17,6 +17,9 @@ It provides flexible styling options such as custom colors, dimensions, and layo
     <div class="cp-box-content">Box Content</div>
 </Box>
 ```tsx
+
+import { Box } from "pixelartui-react";
+
 <Box>
     <div class="cp-box-content">Box Content</div>
 </Box>
@@ -44,7 +47,7 @@ It provides flexible styling options such as custom colors, dimensions, and layo
         <div class="cp-box-content">Dark Box</div>
     </Box>
 
-    <div class="cp-dark-bg">
+    <div class="cp-dark-bg text-white">
         <Box boxStyle="light">
             <div class="cp-box-content">Light Box</div>
         </Box>

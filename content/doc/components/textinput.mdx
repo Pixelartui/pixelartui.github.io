@@ -1,0 +1,188 @@
+import {
+    BasicExample,
+    TextInputType,
+    TextInputCustomSize,
+    TextInputFullwidth,
+    TextInputPlaceholder,
+    TextInputNoLabel,
+    TextInputError,
+    TextInputHelperText,
+    TextInputDisabled,
+    TextInputCustomColor,
+    TextInputStyle,
+} from "../../../app/_components/textInputDemo";
+
+# TextInput
+
+The **TextInput** component provides a pixel-art styled single-line input for entering text, numbers, emails, and other form values.  
+It supports labels, error states, helper text, custom colors, and multiple styling variations to match the retro visual language of PixelartUI.  
+Perfect for forms, search bars, and data entry fields, the TextInput delivers a clean and nostalgic user experience with full flexibility.
+
+---
+
+### Basic Example
+
+---
+
+<BasicExample />
+
+```tsx
+<TextInput inputName="name" textLabel="Name" type="main" />
+```
+
+### Text area types
+
+---
+
+<TextInputType />
+
+```tsx
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="main"
+/>
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="inline"
+/>
+```
+
+### Text area custom size
+
+---
+
+<TextInputCustomSize />
+
+```tsx
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="main"
+    width="400px"
+    height="200px"
+/>
+```
+
+### Text area fullwidth
+
+---
+
+<TextInputFullwidth />
+
+```tsx
+<TextInput inputName="name" textLabel="Name" type="main" fullwidth />
+```
+
+### Text area placeholder
+
+---
+
+<TextInputPlaceholder />
+
+```tsx
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="main"
+    placeholder="The placeholder"
+/>
+```
+
+### Text area no label
+
+---
+
+<TextInputNoLabel />
+
+```tsx
+<TextInput inputName="name" textLabel="Name" type="main" noLabel />
+```
+
+### Text area error
+
+---
+
+<TextInputError />
+
+```tsx
+<TextInput inputName="name" textLabel="Name" type="main" error />
+```
+
+### Text area helper text
+
+---
+
+<TextInputHelperText />
+
+```tsx
+<TextInput inputName="name" textLabel="Name" type="main" helperText="help" />
+```
+
+### Text area disabled
+
+---
+
+<TextInputDisabled />
+
+```tsx
+<TextInput inputName="name" textLabel="Name" type="main" disabled />
+```
+
+### Text area custom color
+
+---
+
+<TextInputCustomColor />
+
+```tsx
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="main"
+    backgroundColor="#b13737"
+/>
+```
+
+### Text area styles
+
+---
+
+<TextInputStyle />
+
+```tsx
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="main"
+    textAreaStyle="dark"
+/>
+<TextInput
+    inputName="name"
+    textLabel="Name"
+    type="inline"
+    textAreaStyle="light"
+/>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                   | Default     | Description                                             |
+| --------------------- | ------------------------------------------------------ | ----------- | ------------------------------------------------------- |
+| **`inputName`**       | `string`                                               | —           | A unique name identifier for the TextInput field.       |
+| **`type`**            | `InputType`                                            | —           | Defines the input type (e.g., text, number, password).  |
+| **`textLabel`**       | `string`                                               | `undefined` | Label text displayed above the input.                   |
+| **`placeholder`**     | `string`                                               | `undefined` | Placeholder text shown when the input is empty.         |
+| **`backgroundColor`** | `string`                                               | `undefined` | Sets a custom background color for the input.           |
+| **`noLabel`**         | `boolean`                                              | `false`     | Hides the label when set to `true`.                     |
+| **`error`**           | `boolean`                                              | `false`     | Displays the input in an error state.                   |
+| **`helperText`**      | `string`                                               | `undefined` | Displays helper or validation text beneath the input.   |
+| **`disabled`**        | `boolean`                                              | `false`     | Disables the input and visually indicates inactivity.   |
+| **`value`**           | `string`                                               | `undefined` | Controlled value of the input.                          |
+| **`className`**       | `string`                                               | `undefined` | Adds additional CSS classes for custom styling.         |
+| **`inputStyle`**      | `InputStyle`                                           | `undefined` | Applies a predefined PixelartUI style to the TextInput. |
+| **`width`**           | `string`                                               | `undefined` | Sets a custom width (e.g., `"250px"`, `"100%"`).        |
+| **`height`**          | `string`                                               | `undefined` | Sets a custom height for the input.                     |
+| **`fullwidth`**       | `boolean`                                              | `false`     | Expands the input to fill the width of its container.   |
+| **`onChange`**        | `(event: React.ChangeEvent<HTMLInputElement>) => void` | `undefined` | Callback fired when the input value changes.            |

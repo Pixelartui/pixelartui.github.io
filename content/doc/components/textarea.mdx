@@ -1,0 +1,183 @@
+import {
+    BasicExample,
+    TextAreaType,
+    TextAreaCustomSize,
+    TextAreaFullwidth,
+    TextAreaPlaceholder,
+    TextAreaNoLabel,
+    TextAreaError,
+    TextAreaHelperText,
+    TextAreaDisabled,
+    TextAreaCustomColor,
+    TextAreaStyle,
+} from "../../../app/_components/textAreaDemo";
+
+# TextArea
+
+The **TextArea** component provides a pixel-art styled multiline input field for capturing longer text content.  
+Built to match the retro aesthetic of PixelartUI, it supports labels, error states, helper text, flexible sizing, and multiple style variations.  
+Whether you're collecting comments, descriptions, or notes, the TextArea ensures a consistent and nostalgic look across your interface.
+
+---
+
+### Basic Example
+
+---
+
+<BasicExample />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" />
+```
+
+### Text area types
+
+---
+
+<TextAreaType />
+
+```tsx
+<TextArea
+    inputName="name"
+    label="Note"
+    type="main"
+/>
+<TextArea
+    inputName="name"
+    label="Note"
+    type="inline"
+/>
+```
+
+### Text area custom size
+
+---
+
+<TextAreaCustomSize />
+
+```tsx
+<TextArea
+    inputName="name"
+    label="Note"
+    type="main"
+    width="400px"
+    height="200px"
+/>
+```
+
+### Text area fullwidth
+
+---
+
+<TextAreaFullwidth />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" fullwidth />
+```
+
+### Text area placeholder
+
+---
+
+<TextAreaPlaceholder />
+
+```tsx
+<TextArea
+    inputName="name"
+    label="Note"
+    type="main"
+    placeholder="The placeholder"
+/>
+```
+
+### Text area no label
+
+---
+
+<TextAreaNoLabel />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" noLabel />
+```
+
+### Text area error
+
+---
+
+<TextAreaError />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" error />
+```
+
+### Text area helper text
+
+---
+
+<TextAreaHelperText />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" helperText="help" />
+```
+
+### Text area disabled
+
+---
+
+<TextAreaDisabled />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" disabled />
+```
+
+### Text area custom color
+
+---
+
+<TextAreaCustomColor />
+
+```tsx
+<TextArea inputName="name" label="Note" type="main" backgroundColor="#b13737" />
+```
+
+### Text area styles
+
+---
+
+<TextAreaStyle />
+
+```tsx
+<TextArea
+    inputName="name"
+    label="Note"
+    type="main"
+    textAreaStyle="dark"
+/>
+<TextArea
+    inputName="name"
+    label="Note"
+    type="inline"
+    textAreaStyle="light"
+/>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                      | Default     | Description                                              |
+| --------------------- | --------------------------------------------------------- | ----------- | -------------------------------------------------------- |
+| **`inputName`**       | `string`                                                  | —           | A unique name identifier for the TextArea input.         |
+| **`placeholder`**     | `string`                                                  | `undefined` | Placeholder text displayed when the field is empty.      |
+| **`backgroundColor`** | `string`                                                  | `undefined` | Sets a custom background color for the TextArea.         |
+| **`error`**           | `boolean`                                                 | `false`     | Displays the TextArea in an error state.                 |
+| **`helperText`**      | `string`                                                  | `undefined` | Displays helper or validation text beneath the TextArea. |
+| **`disabled`**        | `boolean`                                                 | `false`     | Disables the TextArea and visually indicates inactivity. |
+| **`label`**           | `string`                                                  | `undefined` | Label text displayed above the TextArea.                 |
+| **`noLabel`**         | `boolean`                                                 | `false`     | Hides the label when set to `true`.                      |
+| **`type`**            | `TextAreaType`                                            | —           | Determines the TextArea’s visual style or theme.         |
+| **`value`**           | `string`                                                  | `undefined` | The controlled value of the TextArea.                    |
+| **`className`**       | `string`                                                  | `undefined` | Adds additional CSS classes for custom styling.          |
+| **`textAreaStyle`**   | `TextAreaStyle`                                           | `undefined` | Applies a predefined PixelartUI style to the TextArea.   |
+| **`width`**           | `string`                                                  | `undefined` | Sets a custom width (e.g., `"300px"`, `"100%"`).         |
+| **`height`**          | `string`                                                  | `undefined` | Sets a custom height for the TextArea.                   |
+| **`fullwidth`**       | `boolean`                                                 | `false`     | Expands the TextArea to fill the width of its container. |
+| **`onChange`**        | `(event: React.ChangeEvent<HTMLTextAreaElement>) => void` | `undefined` | Callback fired when the TextArea value changes.          |

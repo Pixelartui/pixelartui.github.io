@@ -1,0 +1,119 @@
+import { Switch } from "../../lib/pixelartui";
+import {
+    BasicDemo,
+    SwitchTypes,
+    SwitchDefaultChecked,
+    SwitchNoLabel,
+    SwitchCustomBackground,
+    SwitchStyles,
+} from "../../../app/_components/switchDemo";
+
+# Switch
+
+The **Switch** component offers a pixel-art styled toggle control for enabling or disabling settings in a retro-inspired interface.  
+It supports labels, custom colors, themes, and different visual types—allowing you to create expressive and nostalgic toggle interactions while maintaining full flexibility and accessibility.
+
+---
+
+### Select basic example
+
+---
+
+<BasicDemo />
+
+```tsx
+<Switch label="Note" name="name" type="main" onChange={mockFunction} />
+```
+
+### Select type
+
+---
+
+<SwitchTypes />
+
+```tsx
+<Switch
+    label="Note"
+    name="name"
+    type="main"
+    onChange={mockFunction}
+/>
+<Switch
+    label="Note"
+    name="name"
+    type="inline"
+    onChange={mockFunction}
+/>
+```
+
+### Select default checked
+
+---
+
+<SwitchDefaultChecked />
+
+```tsx
+<Switch
+    label="Note"
+    name="name"
+    type="main"
+    onChange={mockFunction}
+    defaultChecked
+/>
+```
+
+### Select no label
+
+---
+
+<SwitchNoLabel />
+
+```tsx
+<Switch label="Note" name="name" type="main" onChange={mockFunction} noLabel />
+```
+
+### Select custom color
+
+---
+
+<SwitchCustomBackground />
+
+```tsx
+<Switch
+    label="Note"
+    name="name"
+    type="main"
+    onChange={mockFunction}
+    backgroundColor="#05EB57"
+/>
+```
+
+### Select styles
+
+---
+
+<SwitchStyles />
+
+```tsx
+<Switch
+    label="Note"
+    name="name"
+    type="main"
+    onChange={mockFunction}
+    backgroundColor="#05EB57"
+/>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                               | Default     | Description                                                   |
+| --------------------- | -------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| **`label`**           | `string`                                           | —           | The text label displayed next to the Switch.                  |
+| **`type`**            | `SwitchType`                                       | —           | Determines the visual style of the Switch.                    |
+| **`name`**            | `string`                                           | —           | A unique name identifier for the Switch input.                |
+| **`defaultChecked`**  | `boolean`                                          | `false`     | Sets the initial checked state of the Switch.                 |
+| **`noLabel`**         | `boolean`                                          | `false`     | Hides the label when set to `true`.                           |
+| **`backgroundColor`** | `string`                                           | `undefined` | Sets a custom background color for the Switch container.      |
+| **`className`**       | `string`                                           | `undefined` | Adds additional CSS classes for custom styling.               |
+| **`switchStyle`**     | `SwitchStyle`                                      | `undefined` | Applies a predefined PixelartUI style or theme to the Switch. |
+| **`onChange`**        | `(e: React.ChangeEvent<HTMLInputElement>) => void` | —           | Callback fired when the Switch value changes.                 |

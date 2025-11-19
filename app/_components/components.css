@@ -1,0 +1,30 @@
+.cp-button-container,
+.cp-box-container,
+.cp-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.cp-type-container {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+
+    .cp-select-container:last-child {
+        margin-top: 30px;
+    }
+
+    .cp-switch-container:last-child {
+        margin-top: 30px;
+    }
+}
+
+.cp-dark-bg {
+    background-color: black;
+    padding: 10px;
+}
+
+.cp-box-content {
+    padding: 5px;
+}

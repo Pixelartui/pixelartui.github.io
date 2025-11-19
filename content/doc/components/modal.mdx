@@ -1,0 +1,331 @@
+import {
+    ModalDemo,
+    ModalCustomColor,
+    ModalCustomHeader,
+    ModalCustomActions,
+    ModalCustomSize,
+    ModalDisabled,
+    ModalLightStyle,
+} from "../../../app/_components/modalDemo";
+
+# Modal
+
+The **Modal** component is a pixel-art styled dialog window that appears above the main interface to capture user attention.
+It’s ideal for confirmations, alerts, input prompts, or any content that requires focused interaction.
+With customizable headers, actions, dimensions, and styling options, the Modal provides both flexibility and a distinct retro look consistent with the PixelartUI design language.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<ModalDemo />
+
+```tsx
+
+    import { Button, Modal } from "pixelartui-react";
+
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Open modal"
+        onClick={() => setOpen(true)}
+    />
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        header="Attention"
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+### Modal Custom Color
+
+---
+
+<ModalCustomColor />
+
+```tsx
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Open modal"
+        onClick={() => setOpen(true)}
+    />
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        header="Attention"
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        backgroundColor="#b13737"
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+### Modal Custom Header
+
+---
+
+<ModalCustomHeader />
+
+```tsx
+   <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Open custom header modal"
+        onClick={() => setOpen(true)}
+    />
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        customHeader={
+            <Button
+                text="Custom Header Component"
+                buttonSize={"small"}
+                buttonType={"main"}
+                onClick={() => {}}
+            />
+        }
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+### Modal Custom Header
+
+---
+
+<ModalCustomActions />
+
+```tsx
+   <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Open custom action modal"
+        onClick={() => setOpen(true)}
+    />
+    <Modal
+        header="This is the header"
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        customAction={
+            <div>
+                <Button
+                    text="Custom Action 1"
+                    buttonSize={"small"}
+                    buttonType={"main"}
+                    onClick={() => {
+                        alert("Custom Action 1");
+                    }}
+                />
+                <Button
+                    text="Custom Action 2t"
+                    buttonSize={"small"}
+                    buttonType={"main"}
+                    onClick={() => {
+                        alert("Custom Action 2");
+                    }}
+                />
+                <Button
+                    text="Custom Action 3"
+                    buttonSize={"small"}
+                    buttonType={"main"}
+                    onClick={() => {
+                        alert("Custom Action 3");
+                    }}
+                />
+            </div>
+        }
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+### Modal custom size
+
+---
+
+<ModalCustomSize />
+
+```tsx
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Open custom size modal"
+        onClick={() => setOpen(true)}
+    />
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        header="Attention"
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        width="800px"
+        height="300px"
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+### Modal disabled
+
+---
+
+<ModalDisabled />
+
+```tsx
+    <Button
+        buttonSize="medium"
+        buttonType="main"
+        text="Open disabled modal"
+        onClick={() => setOpen(true)}
+    />
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        header="Attention"
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        disabled
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+### Modal Style
+
+---
+
+<div className="cp-container">
+    <ModalDemo />
+    <ModalLightStyle />
+</div>
+
+```tsx
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        header="Attention"
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        modalStyle="dark"
+    >
+        <div>This is a content</div>
+    </Modal>
+
+    <Modal
+        actionButtons={{
+            left: "Cancel",
+            right: "OK",
+        }}
+        handleClose={() => {
+            setOpen(false);
+        }}
+        header="Attention"
+        name="story-modal"
+        onClickButtonLeft={() => {}}
+        onClickButtonRight={() => {
+            setOpen(false);
+        }}
+        open={open}
+        modalStyle="light"
+    >
+        <div>This is a content</div>
+    </Modal>
+```
+
+## 🔧 Props
+
+| Prop                     | Type                                                        | Default     | Description                                                  |
+| ------------------------ | ----------------------------------------------------------- | ----------- | ------------------------------------------------------------ |
+| **`backgroundColor`**    | `string`                                                    | `undefined` | Sets a custom background color for the Modal window.         |
+| **`open`**               | `boolean`                                                   | —           | Controls whether the Modal is visible.                       |
+| **`header`**             | `string`                                                    | `undefined` | Text to display as the Modal’s header.                       |
+| **`customHeader`**       | `ReactNode`                                                 | `undefined` | Allows rendering a fully custom header component.            |
+| **`actionButtons`**      | `ActionText`                                                | `undefined` | Provides default left/right action button labels.            |
+| **`customAction`**       | `ReactNode`                                                 | `undefined` | Allows rendering completely custom action button components. |
+| **`children`**           | `ReactNode`                                                 | `undefined` | Content to be displayed inside the Modal’s body.             |
+| **`disabled`**           | `boolean`                                                   | `false`     | Disables action buttons and visually signals inactivity.     |
+| **`name`**               | `string`                                                    | —           | A unique identifier for the Modal instance.                  |
+| **`className`**          | `string`                                                    | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`modalStyle`**         | `ModalStyle`                                                | `undefined` | Applies a predefined PixelartUI modal style or theme.        |
+| **`width`**              | `string`                                                    | `undefined` | Sets a custom width (e.g., `"300px"` or `"50%"`).            |
+| **`height`**             | `string`                                                    | `undefined` | Sets a custom height for the Modal.                          |
+| **`onClickButtonLeft`**  | `(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void` | `undefined` | Callback fired when the left action button is clicked.       |
+| **`onClickButtonRight`** | `(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void` | `undefined` | Callback fired when the right action button is clicked.      |
+| **`handleClose`**        | `(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void` | `undefined` | Callback fired when the Modal’s close action is triggered.   |

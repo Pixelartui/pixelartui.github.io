@@ -1,4 +1,4 @@
-import { Button, mockFunction } from "../../lib/pixelartui";
+import { Button, mockFunction } from "../../../lib/pixelartui";
 
 # Button
 
@@ -21,12 +21,14 @@ It supports multiple style, sizes, and types to fit different use cases while pr
 />
 
 ```tsx
+import { Button } from "pixelartui-react";
+
 <Button
     buttonSize="medium"
     buttonType="main"
     text="Main"
     onClick={mockFunction}
-/>
+/>;
 ```
 
 ### Button Types
