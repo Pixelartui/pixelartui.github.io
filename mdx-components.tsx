@@ -6,7 +6,7 @@ const themeComponents = getThemeComponents();
 
 // Merge components
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useMDXComponents(components: MDXComponents) {
+export function useMDXComponents(components?: MDXComponents) {
     return {
         ...themeComponents,
         ...components,
