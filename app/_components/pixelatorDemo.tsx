@@ -1,135 +1,98 @@
-import {
-    BasicDemo,
-    PixelatorGrid,
-    PixelatorSizes,
-    PixelatorFulldemo,
-} from "../../../app/_components/pixelatorDemo";
+"use client";
 
-# Pixelator
-
-The Pixelator component renders fully customizable pixel-art on your webpage using a grid-based system.
-It accepts pixel data, canvas dimensions, and sizing options, allowing you to display any artwork—from icons to game sprites—in a clean, structured, pixel-perfect layout.
-
-Pixelator is ideal for:
-
--   Displaying icons or sprites
-
--   Rendering pixel-art avatars
-
--   Visualizing retro game assets
-
-## 🚀 Usage
-
-### Basic Example
-
----
-
-<BasicDemo />
-
-```
-const pixels = {
-    0: { color: "#303f46" },
-    1: { color: "#ffffff" },
-    2: { color: "#ffffff" },
-    3: { color: "#303f46" },
-};
-```
-
-```
-
-<Pixelator
-    pixelPerRow={2}
-    pixelPerCol={2}
-    pixelSize={50}
-    showgrid={true}
-    pixels={pixels}
-/>
-
-```
-
-### Pixelator Show Grid
-
----
-
-<PixelatorGrid />
-
-```
-
-<Pixelator
-    pixelPerRow={5}
-    pixelPerCol={5}
-    pixelSize={10}
-    showgrid={true}
-    pixels={pixels}
-/>
-
-```
-
-### Pixelator Sizes
-
----
-
-<PixelatorSizes />
-
-```
-
-<Pixelator
-    pixelPerRow={5}
-    pixelPerCol={5}
-    pixelSize={10}
-    showgrid={true}
-    pixels={pixels}
-/>
-
-<Pixelator
-    pixelPerRow={5}
-    pixelPerCol={5}
-    pixelSize={20}
-    showgrid={true}
-    pixels={pixels}
-/>
-
-```
-
-| Prop              | Type        | Default     | Description                                             |
-| ----------------- | ----------- | ----------- | ------------------------------------------------------- |
-| **`pixelPerRow`** | `number`    | —           | Number of pixels in each row of the canvas.             |
-| **`pixelPerCol`** | `number`    | —           | Number of pixels in each column of the canvas.          |
-| **`pixelSize`**   | `number`    | `10`        | Width/height of each pixel box in **px**.               |
-| **`showgrid`**    | `boolean`   | `false`     | Shows a grid outline for debugging or stylistic effect. |
-| **`pixels`**      | `PixelData` | —           | Key-value mapping of pixel index → `{ color }`.         |
-| **`className`**   | `string`    | `undefined` | Additional CSS classes for custom styling.              |
-
-### 🧰 Utility: cssToPixelator
-
----
-
-Converts CSS box-shadow pixel-art into Pixelator data.
-
-<PixelatorSizes />
-
-```typescipt
-
-interface CssData {
-  css: string;
-  canvasWidth: number;
-  canvasHeight: number;
-  pixelSize: number;
-}
-
-```
-
----
-
-### Full Demo
-
-In order to generate css box-shadow you can use this tool from [pixelartcss.com](https://pixelartcss.com/)
-Step by step tutorial can be found [here](https://medium.com/@yazed.jamal/create-pixel-art-using-pixelartui-f429a72af451).
-
-<PixelatorFulldemo />
-
-```tsx
 import { Pixelator, cssToPixelator } from "../../lib/pixelartui";
+
+export const BasicDemo = () => {
+    const pixels = {
+        0: { color: "#303f46" },
+        1: { color: "#ffffff" },
+        2: { color: "#ffffff" },
+        3: { color: "#303f46" },
+    };
+    return (
+        <Pixelator
+            pixelPerRow={2}
+            pixelPerCol={2}
+            pixelSize={50}
+            showgrid={false}
+            pixels={pixels}
+        />
+    );
+};
+
+export const PixelatorGrid = () => {
+    const pixels = cssToPixelator({
+        canvasHeight: 5,
+        canvasWidth: 5,
+        pixelSize: 10,
+        css: `.pixelart-to-css {
+  box-shadow: 20px 20px 0 0 rgba(0, 150, 136, 1), 40px 20px 0 0 rgba(0, 150, 136, 1), 30px 30px 0 0 rgba(255, 235, 59, 1), 20px 40px 0 0 rgba(0, 150, 136, 1), 40px 40px 0 0 rgba(0, 150, 136, 1);
+  height: 10px;
+  width: 10px;
+}`,
+    });
+    return (
+        <div className="flex justify-start items-center gap-20">
+            <div className="flex flex-col items-center">
+                <Pixelator
+                    pixelPerRow={pixels.canvasWidth}
+                    pixelPerCol={pixels.canvasHeight}
+                    pixelSize={pixels.pixelSize}
+                    showgrid={false}
+                    pixels={pixels.data}
+                />
+                <div>No grid</div>
+            </div>
+            <div className="flex flex-col items-center">
+                <Pixelator
+                    pixelPerRow={pixels.canvasWidth}
+                    pixelPerCol={pixels.canvasHeight}
+                    pixelSize={pixels.pixelSize}
+                    showgrid={true}
+                    pixels={pixels.data}
+                />
+                <div>With grid</div>
+            </div>
+        </div>
+    );
+};
+
+export const PixelatorSizes = () => {
+    const pixels = cssToPixelator({
+        canvasHeight: 5,
+        canvasWidth: 5,
+        pixelSize: 10,
+        css: `.pixelart-to-css {
+  box-shadow: 20px 20px 0 0 rgba(0, 150, 136, 1), 40px 20px 0 0 rgba(0, 150, 136, 1), 30px 30px 0 0 rgba(255, 235, 59, 1), 20px 40px 0 0 rgba(0, 150, 136, 1), 40px 40px 0 0 rgba(0, 150, 136, 1);
+  height: 10px;
+  width: 10px;
+}`,
+    });
+    return (
+        <div className="flex justify-start items-center gap-20">
+            <div className="flex flex-col items-center">
+                <Pixelator
+                    pixelPerRow={pixels.canvasWidth}
+                    pixelPerCol={pixels.canvasHeight}
+                    pixelSize={10}
+                    showgrid={false}
+                    pixels={pixels.data}
+                />
+                <div>smaller</div>
+            </div>
+            <div className="flex flex-col items-center">
+                <Pixelator
+                    pixelPerRow={pixels.canvasWidth}
+                    pixelPerCol={pixels.canvasHeight}
+                    pixelSize={20}
+                    showgrid={false}
+                    pixels={pixels.data}
+                />
+                <div>larger</div>
+            </div>
+        </div>
+    );
+};
 
 export const PixelatorFulldemo = () => {
     const pixels = cssToPixelator({
@@ -152,4 +115,3 @@ export const PixelatorFulldemo = () => {
         />
     );
 };
-```
