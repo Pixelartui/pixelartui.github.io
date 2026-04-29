@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PixelArt UI Documentation
 
-## Getting Started
+Official documentation website for PixelArt UI - A retro pixel art component library.
 
-First, run the development server:
+## Live Sites
+
+- **Documentation**: [https://pixelartui.github.io](https://pixelartui.github.io)
+- **Component Storybook**: [https://pixelartui.github.io/storybook](https://pixelartui.github.io/storybook)
+
+## About
+
+This is a [Next.js](https://nextjs.org) documentation site using [Nextra](https://nextra.site/) for the main documentation and [Storybook](https://storybook.js.org/) for interactive component demos.
+
+## Development
+
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to see the documentation site.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment workflow:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Builds the Next.js documentation site
+2. Clones and builds Storybook from [pixelartui-react](https://github.com/Pixelartui/pixelartui-react)
+3. Combines both into a single static site deployment
+4. Deploys to GitHub Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Storybook Integration
 
-## Deploy on Vercel
+Storybook is automatically built from the component library and deployed to `/storybook`. This ensures the component demos are always in sync with the latest published components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: Next.js 16 with App Router
+- **Documentation**: Nextra
+- **Component Library**: pixelartui-react
+- **Component Demos**: Storybook
+- **Styling**: Tailwind CSS
+- **Deployment**: GitHub Pages
+
+## Related Repositories
+
+- [pixelartui-react](https://github.com/Pixelartui/pixelartui-react) - React component library
+- [pixelartui-wc](https://github.com/Pixelartui/pixelartui-wc) - Web Components version
