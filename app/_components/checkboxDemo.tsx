@@ -1,49 +1,43 @@
-"use client";
-
 import { Checkbox, mockFunction } from "../../lib/pixelartui";
 
-export const CheckboxDefault = () => {
+export const BasicDemo = () => {
     return (
         <Checkbox
-            label="Accept terms"
+            label="I agree to the terms"
+            name="agreement"
             type="main"
-            name="terms"
             onChange={mockFunction}
         />
     );
 };
 
-export const CheckboxInline = () => {
+export const CheckboxTypes = () => {
     return (
-        <Checkbox
-            label="Subscribe"
-            type="inline"
-            name="subscribe"
-            onChange={mockFunction}
-        />
+        <div className="flex items-end gap-10">
+            <Checkbox
+                label="I agree to the terms"
+                name="agreement"
+                type="main"
+                onChange={mockFunction}
+            />
+            <Checkbox
+                label="I agree to the terms"
+                name="agreement"
+                type="inline"
+                onChange={mockFunction}
+            />
+        </div>
     );
 };
 
 export const CheckboxDefaultChecked = () => {
     return (
         <Checkbox
-            label="Pre-selected"
+            label="I agree to the terms"
+            name="agreement"
             type="main"
-            name="preselected"
+            onChange={mockFunction}
             defaultChecked
-            onChange={mockFunction}
-        />
-    );
-};
-
-export const CheckboxDisabled = () => {
-    return (
-        <Checkbox
-            label="Disabled"
-            type="main"
-            name="disabled"
-            disabled
-            onChange={mockFunction}
         />
     );
 };
@@ -51,11 +45,23 @@ export const CheckboxDisabled = () => {
 export const CheckboxNoLabel = () => {
     return (
         <Checkbox
-            label="Hidden"
+            label="I agree to the terms"
+            name="agreement"
             type="main"
-            name="nolabel"
-            noLabel
             onChange={mockFunction}
+            noLabel
+        />
+    );
+};
+
+export const CheckboxDisabled = () => {
+    return (
+        <Checkbox
+            label="I agree to the terms"
+            name="agreement"
+            type="main"
+            onChange={mockFunction}
+            disabled
         />
     );
 };
@@ -63,32 +69,32 @@ export const CheckboxNoLabel = () => {
 export const CheckboxCustomBackground = () => {
     return (
         <Checkbox
-            label="Custom color"
+            label="I agree to the terms"
+            name="agreement"
             type="main"
-            name="custom"
-            backgroundColor="#05EB57"
             onChange={mockFunction}
+            backgroundColor="#05EB57"
         />
     );
 };
 
 export const CheckboxStyles = () => {
     return (
-        <div className="flex flex-col gap-10">
+        <div className="flex items-end gap-10">
             <Checkbox
-                label="Dark style"
+                label="I agree to the terms"
+                name="agreement"
                 type="main"
-                name="dark"
-                checkboxStyle="dark"
                 onChange={mockFunction}
+                checkboxStyle="dark"
             />
             <div className="p-5 bg-black">
                 <Checkbox
-                    label="Light style"
+                    label="I agree to the terms"
+                    name="agreement"
                     type="main"
-                    name="light"
-                    checkboxStyle="light"
                     onChange={mockFunction}
+                    checkboxStyle="light"
                 />
             </div>
         </div>
