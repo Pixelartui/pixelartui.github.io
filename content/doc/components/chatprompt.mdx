@@ -1,0 +1,130 @@
+import {
+    ChatPromptDefault,
+    ChatPromptWithPlaceholder,
+    ChatPromptFullwidth,
+    ChatPromptCustomSize,
+    ChatPromptDisabled,
+    ChatPromptCustomColor,
+    ChatPromptStyles,
+} from "../../../app/_components/chatPromptDemo";
+
+# ChatPrompt
+
+The **ChatPrompt** component is a pixel-art styled textarea input designed for chat interfaces.  
+It supports custom sizing, fullwidth mode, placeholder text, and callbacks for text changes and send events — perfect for building retro-styled messaging UIs.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<ChatPromptDefault />
+
+```tsx
+import { ChatPrompt } from "pixelartui-react";
+
+<ChatPrompt inputName="chat" onSend={(value) => console.log(value)} />
+```
+
+### With Placeholder
+
+---
+
+<ChatPromptWithPlaceholder />
+
+```tsx
+<ChatPrompt
+    inputName="chat"
+    placeholder="Type your message..."
+    onSend={(value) => console.log(value)}
+/>
+```
+
+### Fullwidth
+
+---
+
+<ChatPromptFullwidth />
+
+```tsx
+<ChatPrompt inputName="chat" onSend={(value) => console.log(value)} fullwidth />
+```
+
+### Custom Size
+
+---
+
+<ChatPromptCustomSize />
+
+```tsx
+<ChatPrompt
+    inputName="chat"
+    onSend={(value) => console.log(value)}
+    width="600px"
+    height="80px"
+/>
+```
+
+### Disabled
+
+---
+
+<ChatPromptDisabled />
+
+```tsx
+<ChatPrompt inputName="chat" onSend={(value) => console.log(value)} disabled />
+```
+
+### Custom Color
+
+---
+
+<ChatPromptCustomColor />
+
+```tsx
+<ChatPrompt
+    inputName="chat"
+    onSend={(value) => console.log(value)}
+    backgroundColor="#b13737"
+/>
+```
+
+### Styles
+
+---
+
+<ChatPromptStyles />
+
+```tsx
+<ChatPrompt
+    inputName="chat"
+    onSend={(value) => console.log(value)}
+    chatPromptStyle="dark"
+/>
+
+<ChatPrompt
+    inputName="chat"
+    onSend={(value) => console.log(value)}
+    chatPromptStyle="light"
+/>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                          | Default     | Description                                                  |
+| --------------------- | ------------------------------------------------------------- | ----------- | ------------------------------------------------------------ |
+| **`inputName`**       | `string`                                                      | —           | Name attribute for the textarea input.                       |
+| **`placeholder`**     | `string`                                                      | `undefined` | Placeholder text displayed when the input is empty.          |
+| **`backgroundColor`** | `string`                                                      | `undefined` | Overrides the default background color with a custom value.  |
+| **`disabled`**        | `boolean`                                                     | `false`     | Disables interaction with the component.                     |
+| **`value`**           | `string`                                                      | `undefined` | Controlled value of the textarea.                            |
+| **`className`**       | `string`                                                      | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`chatPromptStyle`** | `"dark" \| "light"`                                           | `undefined` | Applies a light or dark theme to the component.              |
+| **`width`**           | `string`                                                      | `undefined` | Sets a custom width (e.g., `"600px"`).                       |
+| **`height`**          | `string`                                                      | `undefined` | Sets a custom height (e.g., `"80px"`).                       |
+| **`fullwidth`**       | `boolean`                                                     | `false`     | Makes the component expand to fill the width of its container. |
+| **`onChange`**        | `(e: React.ChangeEvent<HTMLTextAreaElement>) => void`         | `undefined` | Callback fired when the textarea value changes.              |
+| **`onSend`**          | `(value: string) => void`                                     | `undefined` | Callback fired when the send action is triggered.            |

@@ -1,0 +1,120 @@
+import {
+    TabsDefault,
+    TabsWithDefaultActive,
+    TabsWithDisabled,
+    TabsCustomBackground,
+    TabsStyles,
+} from "../../../app/_components/tabsDemo";
+
+# Tabs
+
+The **Tabs** component is a pixel-art styled tabbed content switcher.  
+It supports multiple panels, disabled tabs, default active selection, and custom styling — ideal for organizing content into switchable views with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<TabsDefault />
+
+```tsx
+import { Tabs } from "pixelartui-react";
+
+<Tabs
+    tabs={[
+        { label: "Tab 1", content: "Content for Tab 1" },
+        { label: "Tab 2", content: "Content for Tab 2" },
+        { label: "Tab 3", content: "Content for Tab 3" },
+    ]}
+    onChange={(index) => console.log(index)}
+/>
+```
+
+### Default Active Tab
+
+---
+
+<TabsWithDefaultActive />
+
+```tsx
+<Tabs
+    tabs={[
+        { label: "Tab 1", content: "Content for Tab 1" },
+        { label: "Tab 2", content: "Content for Tab 2" },
+        { label: "Tab 3", content: "Content for Tab 3" },
+    ]}
+    defaultActiveIndex={1}
+    onChange={(index) => console.log(index)}
+/>
+```
+
+### With Disabled Tab
+
+---
+
+<TabsWithDisabled />
+
+```tsx
+<Tabs
+    tabs={[
+        { label: "Tab 1", content: "Content for Tab 1" },
+        { label: "Tab 2 (Disabled)", content: "Content for Tab 2", disabled: true },
+        { label: "Tab 3", content: "Content for Tab 3" },
+    ]}
+    onChange={(index) => console.log(index)}
+/>
+```
+
+### Custom Background
+
+---
+
+<TabsCustomBackground />
+
+```tsx
+<Tabs
+    tabs={[
+        { label: "Tab 1", content: "Content for Tab 1" },
+        { label: "Tab 2", content: "Content for Tab 2" },
+        { label: "Tab 3", content: "Content for Tab 3" },
+    ]}
+    backgroundColor="#05EB57"
+    onChange={(index) => console.log(index)}
+/>
+```
+
+### Styles
+
+---
+
+<TabsStyles />
+
+```tsx
+<Tabs tabs={tabs} tabsStyle="dark" onChange={(index) => console.log(index)} />
+
+<Tabs tabs={tabs} tabsStyle="light" onChange={(index) => console.log(index)} />
+```
+
+## 🔧 Props
+
+| Prop                    | Type                     | Default     | Description                                                  |
+| ----------------------- | ------------------------ | ----------- | ------------------------------------------------------------ |
+| **`tabs`**              | `TabItem[]`              | —           | Array of tab definitions to display.                         |
+| **`defaultActiveIndex`**| `number`                 | `0`         | Initial active tab index when uncontrolled.                  |
+| **`activeIndex`**       | `number`                 | `undefined` | Controlled active tab index.                                 |
+| **`tabsStyle`**         | `"dark" \| "light"`      | `undefined` | Applies a light or dark theme to the component.              |
+| **`backgroundColor`**   | `string`                 | `undefined` | Custom background color for the active tab.                  |
+| **`className`**         | `string`                 | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`onChange`**          | `(index: number) => void` | `undefined` | Callback fired when the active tab changes.                 |
+
+### TabItem
+
+| Prop           | Type              | Default     | Description                              |
+| -------------- | ----------------- | ----------- | ---------------------------------------- |
+| **`label`**    | `string`          | —           | Display text for the tab.                |
+| **`content`**  | `React.ReactNode` | —           | Content displayed in the tab panel.      |
+| **`disabled`** | `boolean`         | `undefined` | Disables the tab when true.              |

@@ -1,0 +1,92 @@
+import {
+    TooltipDefault,
+    TooltipPositions,
+    TooltipCustomBackground,
+    TooltipStyles,
+} from "../../../app/_components/tooltipDemo";
+
+# Tooltip
+
+The **Tooltip** component is a pixel-art styled hover overlay.  
+It supports four positions, custom colors, and wraps any content — ideal for adding contextual hints with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<TooltipDefault />
+
+```tsx
+import { Tooltip, Button } from "pixelartui-react";
+
+<Tooltip text="This is a tooltip">
+    <Button text="Hover me" buttonSize="small" buttonType="main" />
+</Tooltip>
+```
+
+### Positions
+
+---
+
+<TooltipPositions />
+
+```tsx
+<Tooltip text="Top tooltip" position="top">
+    <Button text="Top" buttonSize="small" buttonType="main" />
+</Tooltip>
+
+<Tooltip text="Bottom tooltip" position="bottom">
+    <Button text="Bottom" buttonSize="small" buttonType="main" />
+</Tooltip>
+
+<Tooltip text="Left tooltip" position="left">
+    <Button text="Left" buttonSize="small" buttonType="main" />
+</Tooltip>
+
+<Tooltip text="Right tooltip" position="right">
+    <Button text="Right" buttonSize="small" buttonType="main" />
+</Tooltip>
+```
+
+### Custom Background
+
+---
+
+<TooltipCustomBackground />
+
+```tsx
+<Tooltip text="Custom color" backgroundColor="#05EB57">
+    <Button text="Hover me" buttonSize="small" buttonType="main" />
+</Tooltip>
+```
+
+### Styles
+
+---
+
+<TooltipStyles />
+
+```tsx
+<Tooltip text="Dark style" tooltipStyle="dark">
+    <Button text="Dark" buttonSize="small" buttonType="main" />
+</Tooltip>
+
+<Tooltip text="Light style" tooltipStyle="light">
+    <Button text="Light" buttonSize="small" buttonType="main" />
+</Tooltip>
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                       | Default     | Description                                                  |
+| --------------------- | ------------------------------------------ | ----------- | ------------------------------------------------------------ |
+| **`text`**            | `string`                                   | —           | The tooltip text content.                                    |
+| **`position`**        | `"top" \| "bottom" \| "left" \| "right"`   | `"top"`     | Tooltip placement relative to the wrapped content.           |
+| **`tooltipStyle`**    | `"dark" \| "light"`                        | `"dark"`    | Applies a light or dark theme to the component.              |
+| **`backgroundColor`** | `string`                                   | `undefined` | Custom background color for the tooltip.                     |
+| **`className`**       | `string`                                   | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`children`**        | `React.ReactNode`                          | —           | Content that triggers the tooltip on hover.                  |

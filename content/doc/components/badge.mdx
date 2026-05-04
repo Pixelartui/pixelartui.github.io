@@ -1,0 +1,93 @@
+import {
+    BadgePrimary,
+    BadgeVariants,
+    BadgeSizes,
+    BadgeDismissible,
+    BadgeStyles,
+} from "../../../app/_components/badgeDemo";
+
+# Badge
+
+The **Badge** component is a pixel-art styled label indicator.  
+It supports multiple variants, sizes, and dismissible behavior — perfect for status indicators, tags, and notifications with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<BadgePrimary />
+
+```tsx
+import { Badge } from "pixelartui-react";
+
+<Badge text="Primary" variant="primary" />
+```
+
+### Variants
+
+---
+
+<BadgeVariants />
+
+```tsx
+<Badge text="Primary" variant="primary" />
+<Badge text="Success" variant="success" />
+<Badge text="Error" variant="error" />
+<Badge text="Warning" variant="warning" />
+<Badge text="Info" variant="info" />
+```
+
+### Sizes
+
+---
+
+<BadgeSizes />
+
+```tsx
+<Badge text="Small" size="small" />
+<Badge text="Medium" size="medium" />
+<Badge text="Large" size="large" />
+```
+
+### Dismissible
+
+---
+
+<BadgeDismissible />
+
+```tsx
+<Badge
+    text="Dismiss me"
+    variant="info"
+    dismissible
+    onDismiss={() => console.log("dismissed")}
+/>
+```
+
+### Styles
+
+---
+
+<BadgeStyles />
+
+```tsx
+<Badge text="Dark style" badgeStyle="dark" />
+
+<Badge text="Light style" badgeStyle="light" />
+```
+
+## 🔧 Props
+
+| Prop               | Type                                                        | Default     | Description                                                 |
+| ------------------ | ----------------------------------------------------------- | ----------- | ----------------------------------------------------------- |
+| **`text`**         | `string`                                                    | —           | The badge text content.                                     |
+| **`size`**         | `"small" \| "medium" \| "large"`                            | `"medium"`  | Size of the badge.                                          |
+| **`variant`**      | `"primary" \| "success" \| "error" \| "warning" \| "info"`  | `"primary"` | The visual variant of the badge.                            |
+| **`badgeStyle`**   | `"dark" \| "light"`                                         | `"dark"`    | Applies a light or dark theme to the component.             |
+| **`dismissible`**  | `boolean`                                                   | `false`     | Shows a dismiss button when true.                           |
+| **`onDismiss`**    | `() => void`                                                | `undefined` | Callback fired when the dismiss button is clicked.          |
+| **`className`**    | `string`                                                    | `undefined` | Adds additional CSS classes for custom styling.             |

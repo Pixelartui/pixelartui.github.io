@@ -1,0 +1,117 @@
+import {
+    BreadcrumbDefault,
+    BreadcrumbWithOnClick,
+    BreadcrumbCustomSeparator,
+    BreadcrumbTwoItems,
+    BreadcrumbStyles,
+} from "../../../app/_components/breadcrumbDemo";
+
+# Breadcrumb
+
+The **Breadcrumb** component is a pixel-art styled navigation trail.  
+It supports links, click handlers, and custom separators — ideal for showing the user's location within a site hierarchy with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<BreadcrumbDefault />
+
+```tsx
+import { Breadcrumb } from "pixelartui-react";
+
+<Breadcrumb
+    items={[
+        { label: "Home", href: "#" },
+        { label: "Products", href: "#" },
+        { label: "Current Page" },
+    ]}
+/>
+```
+
+### With onClick
+
+---
+
+<BreadcrumbWithOnClick />
+
+```tsx
+<Breadcrumb
+    items={[
+        { label: "Home", onClick: () => console.log("Home") },
+        { label: "Category", onClick: () => console.log("Category") },
+        { label: "Item" },
+    ]}
+/>
+```
+
+### Custom Separator
+
+---
+
+<BreadcrumbCustomSeparator />
+
+```tsx
+<Breadcrumb
+    items={[
+        { label: "Home", href: "#" },
+        { label: "Products", href: "#" },
+        { label: "Current Page" },
+    ]}
+    separator="/"
+/>
+```
+
+### Two Items
+
+---
+
+<BreadcrumbTwoItems />
+
+```tsx
+<Breadcrumb
+    items={[
+        { label: "Home", href: "#" },
+        { label: "Page" },
+    ]}
+/>
+```
+
+### Styles
+
+---
+
+<BreadcrumbStyles />
+
+```tsx
+<Breadcrumb
+    items={[{ label: "Home", href: "#" }, { label: "Page" }]}
+    breadcrumbStyle="dark"
+/>
+
+<Breadcrumb
+    items={[{ label: "Home", href: "#" }, { label: "Page" }]}
+    breadcrumbStyle="light"
+/>
+```
+
+## 🔧 Props
+
+| Prop                   | Type               | Default     | Description                                                  |
+| ---------------------- | ------------------ | ----------- | ------------------------------------------------------------ |
+| **`items`**            | `BreadcrumbItem[]` | —           | Array of breadcrumb items to display.                        |
+| **`separator`**        | `string`           | `">"`       | Character(s) displayed between breadcrumb items.             |
+| **`breadcrumbStyle`**  | `"dark" \| "light"` | `undefined` | Applies a light or dark theme to the component.            |
+| **`className`**        | `string`           | `undefined` | Adds additional CSS classes for custom styling.              |
+
+### BreadcrumbItem
+
+| Prop          | Type         | Default     | Description                                  |
+| ------------- | ------------ | ----------- | -------------------------------------------- |
+| **`label`**   | `string`     | —           | Display text for the breadcrumb item.        |
+| **`href`**    | `string`     | `undefined` | URL to navigate to (renders as a link).      |
+| **`onClick`** | `() => void` | `undefined` | Click handler (renders as a button).         |
