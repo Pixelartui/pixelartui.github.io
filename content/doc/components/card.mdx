@@ -1,0 +1,105 @@
+import {
+    CardDefault,
+    CardWithTitle,
+    CardWithFooter,
+    CardCustomBackground,
+    CardStyles,
+} from "../../../app/_components/cardDemo";
+
+# Card
+
+The **Card** component is a pixel-art styled content container.  
+It supports an optional title, body content, and footer section — making it a versatile building block for layouts, dashboards, and content displays with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<CardDefault />
+
+```tsx
+import { Card } from "pixelartui-react";
+
+<Card>
+    <p>This is a basic card with some content.</p>
+</Card>
+```
+
+### With Title
+
+---
+
+<CardWithTitle />
+
+```tsx
+<Card title="Card Title">
+    <p>This is a card with a title and body content.</p>
+</Card>
+```
+
+### With Footer
+
+---
+
+<CardWithFooter />
+
+```tsx
+import { Card, Button } from "pixelartui-react";
+
+<Card
+    title="Card Title"
+    footer={
+        <Button
+            text="Action"
+            buttonSize="small"
+            buttonType="main"
+            onClick={() => {}}
+        />
+    }
+>
+    <p>This card has a title, body, and a footer with an action button.</p>
+</Card>
+```
+
+### Custom Background
+
+---
+
+<CardCustomBackground />
+
+```tsx
+<Card title="Custom Color" backgroundColor="#05EB57">
+    <p>A card with a custom background color.</p>
+</Card>
+```
+
+### Styles
+
+---
+
+<CardStyles />
+
+```tsx
+<Card title="Dark" cardStyle="dark">
+    <p>Dark style card.</p>
+</Card>
+
+<Card title="Light" cardStyle="light">
+    <p>Light style card.</p>
+</Card>
+```
+
+## 🔧 Props
+
+| Prop                  | Type              | Default     | Description                                                  |
+| --------------------- | ----------------- | ----------- | ------------------------------------------------------------ |
+| **`title`**           | `string`          | `undefined` | Text displayed as the card's header.                         |
+| **`children`**        | `ReactNode`       | —           | Content displayed inside the card body.                      |
+| **`footer`**          | `ReactNode`       | `undefined` | Content displayed in the card's footer section.              |
+| **`cardStyle`**       | `"dark" \| "light"` | `undefined` | Applies a light or dark theme to the component.            |
+| **`backgroundColor`** | `string`          | `undefined` | Overrides the default background color with a custom value.  |
+| **`className`**       | `string`          | `undefined` | Adds additional CSS classes for custom styling.              |

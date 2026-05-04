@@ -1,0 +1,122 @@
+import {
+    CheckboxDefault,
+    CheckboxInline,
+    CheckboxDefaultChecked,
+    CheckboxDisabled,
+    CheckboxNoLabel,
+    CheckboxCustomBackground,
+    CheckboxStyles,
+} from "../../../app/_components/checkboxDemo";
+
+# Checkbox
+
+The **Checkbox** component is a pixel-art styled checkbox input.  
+It supports main and inline layouts, custom colors, and disabled state — ideal for forms and settings with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<CheckboxDefault />
+
+```tsx
+import { Checkbox } from "pixelartui-react";
+
+<Checkbox
+    label="Accept terms"
+    type="main"
+    name="terms"
+    onChange={(e) => console.log(e.target.checked)}
+/>
+```
+
+### Inline Layout
+
+---
+
+<CheckboxInline />
+
+```tsx
+<Checkbox
+    label="Subscribe"
+    type="inline"
+    name="subscribe"
+    onChange={(e) => console.log(e.target.checked)}
+/>
+```
+
+### Default Checked
+
+---
+
+<CheckboxDefaultChecked />
+
+```tsx
+<Checkbox label="Pre-selected" type="main" name="preselected" defaultChecked />
+```
+
+### Disabled
+
+---
+
+<CheckboxDisabled />
+
+```tsx
+<Checkbox label="Disabled" type="main" name="disabled" disabled />
+```
+
+### No Label
+
+---
+
+<CheckboxNoLabel />
+
+```tsx
+<Checkbox label="Hidden" type="main" name="nolabel" noLabel />
+```
+
+### Custom Background
+
+---
+
+<CheckboxCustomBackground />
+
+```tsx
+<Checkbox
+    label="Custom color"
+    type="main"
+    name="custom"
+    backgroundColor="#05EB57"
+/>
+```
+
+### Styles
+
+---
+
+<CheckboxStyles />
+
+```tsx
+<Checkbox label="Dark style" type="main" name="dark" checkboxStyle="dark" />
+
+<Checkbox label="Light style" type="main" name="light" checkboxStyle="light" />
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                  | Default     | Description                                                  |
+| --------------------- | ----------------------------------------------------- | ----------- | ------------------------------------------------------------ |
+| **`label`**           | `string`                                              | —           | Label text for the checkbox.                                 |
+| **`type`**            | `"main" \| "inline"`                                  | —           | Layout variant of the checkbox.                              |
+| **`name`**            | `string`                                              | —           | Name attribute for the input element.                        |
+| **`defaultChecked`**  | `boolean`                                             | `false`     | Initial checked state.                                       |
+| **`noLabel`**         | `boolean`                                             | `undefined` | Hides the label when true.                                   |
+| **`backgroundColor`** | `string`                                              | `undefined` | Custom background color for the checkbox box.                |
+| **`checkboxStyle`**   | `"dark" \| "light"`                                   | `"dark"`    | Applies a light or dark theme to the component.              |
+| **`disabled`**        | `boolean`                                             | `false`     | Disables interaction with the checkbox.                      |
+| **`className`**       | `string`                                              | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`onChange`**        | `(e: React.ChangeEvent<HTMLInputElement>) => void`    | `undefined` | Callback fired when the checkbox state changes.              |

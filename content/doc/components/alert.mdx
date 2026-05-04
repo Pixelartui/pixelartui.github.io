@@ -1,0 +1,113 @@
+import {
+    AlertInfo,
+    AlertSuccess,
+    AlertWarning,
+    AlertError,
+    AlertWithTitle,
+    AlertDismissible,
+    AlertStyles,
+} from "../../../app/_components/alertDemo";
+
+# Alert
+
+The **Alert** component is a pixel-art styled notification banner.  
+It supports multiple variants (info, success, warning, error), an optional title, and dismissible behavior — ideal for displaying feedback messages with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Info
+
+---
+
+<AlertInfo />
+
+```tsx
+import { Alert } from "pixelartui-react";
+
+<Alert message="This is an informational message." variant="info" />
+```
+
+### Success
+
+---
+
+<AlertSuccess />
+
+```tsx
+<Alert message="Operation completed successfully!" variant="success" />
+```
+
+### Warning
+
+---
+
+<AlertWarning />
+
+```tsx
+<Alert message="Please review before continuing." variant="warning" />
+```
+
+### Error
+
+---
+
+<AlertError />
+
+```tsx
+<Alert message="Something went wrong." variant="error" />
+```
+
+### With Title
+
+---
+
+<AlertWithTitle />
+
+```tsx
+<Alert
+    title="Heads up!"
+    message="This alert has a title and a message."
+    variant="info"
+/>
+```
+
+### Dismissible
+
+---
+
+<AlertDismissible />
+
+```tsx
+<Alert
+    message="You can dismiss this alert."
+    variant="info"
+    dismissible
+    onDismiss={() => console.log("dismissed")}
+/>
+```
+
+### Styles
+
+---
+
+<AlertStyles />
+
+```tsx
+<Alert message="Dark style alert." variant="info" alertStyle="dark" />
+
+<Alert message="Light style alert." variant="info" alertStyle="light" />
+```
+
+## 🔧 Props
+
+| Prop               | Type                                              | Default     | Description                                                 |
+| ------------------ | ------------------------------------------------- | ----------- | ----------------------------------------------------------- |
+| **`message`**      | `string`                                          | —           | The main alert message text.                                |
+| **`variant`**      | `"success" \| "error" \| "warning" \| "info"`     | `"info"`    | The visual variant of the alert.                            |
+| **`title`**        | `string`                                          | `undefined` | Optional title displayed above the message.                 |
+| **`dismissible`**  | `boolean`                                         | `false`     | Shows a dismiss button when true.                           |
+| **`alertStyle`**   | `"dark" \| "light"`                               | `"dark"`    | Applies a light or dark theme to the component.             |
+| **`className`**    | `string`                                          | `undefined` | Adds additional CSS classes for custom styling.             |
+| **`onDismiss`**    | `() => void`                                      | `undefined` | Callback fired when the dismiss button is clicked.          |

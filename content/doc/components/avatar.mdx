@@ -1,0 +1,83 @@
+import {
+    AvatarWithInitials,
+    AvatarSizes,
+    AvatarDefault,
+    AvatarCustomBackground,
+    AvatarStyles,
+} from "../../../app/_components/avatarDemo";
+
+# Avatar
+
+The **Avatar** component is a pixel-art styled user representation element.  
+It can display an image or text initials, supports three sizes, and offers customizable colors and themes — perfect for user profiles and lists with a retro look.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<AvatarWithInitials />
+
+```tsx
+import { Avatar } from "pixelartui-react";
+
+<Avatar initials="AB" />
+```
+
+### Sizes
+
+---
+
+<AvatarSizes />
+
+```tsx
+<Avatar initials="SM" size="small" />
+<Avatar initials="MD" size="medium" />
+<Avatar initials="LG" size="large" />
+```
+
+### Without Initials
+
+---
+
+<AvatarDefault />
+
+```tsx
+<Avatar alt="User avatar" />
+```
+
+### Custom Background
+
+---
+
+<AvatarCustomBackground />
+
+```tsx
+<Avatar initials="AB" backgroundColor="#05EB57" />
+```
+
+### Styles
+
+---
+
+<AvatarStyles />
+
+```tsx
+<Avatar initials="DK" avatarStyle="dark" />
+<Avatar initials="LT" avatarStyle="light" />
+```
+
+## 🔧 Props
+
+| Prop                  | Type                             | Default     | Description                                               |
+| --------------------- | -------------------------------- | ----------- | --------------------------------------------------------- |
+| **`src`**             | `string`                         | `undefined` | Image source URL for the avatar.                          |
+| **`alt`**             | `string`                         | `undefined` | Alt text for the avatar image.                            |
+| **`initials`**        | `string`                         | `undefined` | Text initials displayed when no image is provided.        |
+| **`size`**            | `"small" \| "medium" \| "large"` | `"medium"`  | Controls the avatar's overall size.                       |
+| **`avatarStyle`**     | `"dark" \| "light"`              | `undefined` | Applies a light or dark theme to the component.           |
+| **`backgroundColor`** | `string`                         | `undefined` | Overrides the default background color with a custom value. |
+| **`className`**       | `string`                         | `undefined` | Adds additional CSS classes for custom styling.           |

@@ -1,0 +1,106 @@
+import {
+    PaginationDefault,
+    PaginationFewPages,
+    PaginationWithDefaultPage,
+    PaginationManyPages,
+    PaginationCustomBackground,
+    PaginationStyles,
+} from "../../../app/_components/paginationDemo";
+
+# Pagination
+
+The **Pagination** component is a pixel-art styled page navigation control.  
+It supports configurable page ranges, default page selection, and custom styling — ideal for paginated content with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<PaginationDefault />
+
+```tsx
+import { Pagination } from "pixelartui-react";
+
+<Pagination totalPages={10} onChange={(page) => console.log(page)} />
+```
+
+### Few Pages
+
+---
+
+<PaginationFewPages />
+
+```tsx
+<Pagination totalPages={3} onChange={(page) => console.log(page)} />
+```
+
+### Default Page
+
+---
+
+<PaginationWithDefaultPage />
+
+```tsx
+<Pagination
+    totalPages={10}
+    defaultPage={5}
+    onChange={(page) => console.log(page)}
+/>
+```
+
+### Many Pages
+
+---
+
+<PaginationManyPages />
+
+```tsx
+<Pagination
+    totalPages={50}
+    defaultPage={25}
+    onChange={(page) => console.log(page)}
+/>
+```
+
+### Custom Background
+
+---
+
+<PaginationCustomBackground />
+
+```tsx
+<Pagination
+    totalPages={10}
+    backgroundColor="#05EB57"
+    onChange={(page) => console.log(page)}
+/>
+```
+
+### Styles
+
+---
+
+<PaginationStyles />
+
+```tsx
+<Pagination totalPages={10} paginationStyle="dark" onChange={(page) => console.log(page)} />
+
+<Pagination totalPages={10} paginationStyle="light" onChange={(page) => console.log(page)} />
+```
+
+## 🔧 Props
+
+| Prop                  | Type                    | Default     | Description                                                  |
+| --------------------- | ----------------------- | ----------- | ------------------------------------------------------------ |
+| **`totalPages`**      | `number`                | —           | Total number of pages available.                             |
+| **`currentPage`**     | `number`                | `undefined` | Controlled current page (makes component controlled).        |
+| **`defaultPage`**     | `number`                | `1`         | Initial page when used as an uncontrolled component.         |
+| **`siblingCount`**    | `number`                | `1`         | Number of page buttons shown around the current page.        |
+| **`paginationStyle`** | `"dark" \| "light"`     | `"dark"`    | Applies a light or dark theme to the component.              |
+| **`backgroundColor`** | `string`                | `undefined` | Custom background color for the active page button.          |
+| **`className`**       | `string`                | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`onChange`**        | `(page: number) => void` | `undefined` | Callback fired when the current page changes.               |

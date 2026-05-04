@@ -1,0 +1,120 @@
+import {
+    RadioDefault,
+    RadioInline,
+    RadioDefaultChecked,
+    RadioDisabled,
+    RadioCustomBackground,
+    RadioStyles,
+} from "../../../app/_components/radioDemo";
+
+# Radio
+
+The **Radio** component is a pixel-art styled radio button input.  
+It supports main and inline layouts, custom colors, and disabled state — ideal for single-selection forms and option groups with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<RadioDefault />
+
+```tsx
+import { Radio } from "pixelartui-react";
+
+<Radio
+    label="Option A"
+    type="main"
+    name="demo"
+    value="a"
+    onChange={(e) => console.log(e.target.value)}
+/>
+<Radio
+    label="Option B"
+    type="main"
+    name="demo"
+    value="b"
+    onChange={(e) => console.log(e.target.value)}
+/>
+```
+
+### Inline Layout
+
+---
+
+<RadioInline />
+
+```tsx
+<Radio label="Option A" type="inline" name="inline" value="a" />
+<Radio label="Option B" type="inline" name="inline" value="b" />
+```
+
+### Default Checked
+
+---
+
+<RadioDefaultChecked />
+
+```tsx
+<Radio label="Option A" type="main" name="checked" value="a" defaultChecked />
+<Radio label="Option B" type="main" name="checked" value="b" />
+```
+
+### Disabled
+
+---
+
+<RadioDisabled />
+
+```tsx
+<Radio label="Disabled" type="main" name="disabled" value="disabled" disabled />
+```
+
+### Custom Background
+
+---
+
+<RadioCustomBackground />
+
+```tsx
+<Radio
+    label="Option A"
+    type="main"
+    name="custom"
+    value="a"
+    backgroundColor="#05EB57"
+    defaultChecked
+/>
+```
+
+### Styles
+
+---
+
+<RadioStyles />
+
+```tsx
+<Radio label="Dark style" type="main" name="dark" value="dark" radioStyle="dark" />
+
+<Radio label="Light style" type="main" name="light" value="light" radioStyle="light" />
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                  | Default     | Description                                                  |
+| --------------------- | ----------------------------------------------------- | ----------- | ------------------------------------------------------------ |
+| **`label`**           | `string`                                              | —           | Label text for the radio button.                             |
+| **`type`**            | `"main" \| "inline"`                                  | —           | Layout variant of the radio button.                          |
+| **`name`**            | `string`                                              | —           | Name attribute for the input group.                          |
+| **`value`**           | `string`                                              | —           | Value for the radio button.                                  |
+| **`defaultChecked`**  | `boolean`                                             | `false`     | Initial checked state.                                       |
+| **`checked`**         | `boolean`                                             | `undefined` | Controlled checked state.                                    |
+| **`noLabel`**         | `boolean`                                             | `undefined` | Hides the label when true.                                   |
+| **`backgroundColor`** | `string`                                              | `undefined` | Custom background color for the radio indicator.             |
+| **`radioStyle`**      | `"dark" \| "light"`                                   | `"dark"`    | Applies a light or dark theme to the component.              |
+| **`disabled`**        | `boolean`                                             | `false`     | Disables interaction with the radio button.                  |
+| **`className`**       | `string`                                              | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`onChange`**        | `(e: React.ChangeEvent<HTMLInputElement>) => void`    | `undefined` | Callback fired when the radio button state changes.          |

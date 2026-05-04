@@ -1,0 +1,131 @@
+import {
+    SliderDefault,
+    SliderInline,
+    SliderCustomRange,
+    SliderDisabled,
+    SliderNoLabel,
+    SliderCustomBackground,
+    SliderStyles,
+} from "../../../app/_components/sliderDemo";
+
+# Slider
+
+The **Slider** component is a pixel-art styled range input.  
+It supports custom min/max/step values, value display, and disabled state — ideal for adjustable settings and controls with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<SliderDefault />
+
+```tsx
+import { Slider } from "pixelartui-react";
+
+<Slider
+    label="Volume"
+    type="main"
+    name="volume"
+    onChange={(e) => console.log(e.target.value)}
+/>
+```
+
+### Inline Layout
+
+---
+
+<SliderInline />
+
+```tsx
+<Slider label="Brightness" type="inline" name="brightness" />
+```
+
+### Custom Range
+
+---
+
+<SliderCustomRange />
+
+```tsx
+<Slider
+    label="Temperature"
+    type="main"
+    name="temperature"
+    min={0}
+    max={50}
+    step={5}
+    defaultValue={25}
+/>
+```
+
+### Disabled
+
+---
+
+<SliderDisabled />
+
+```tsx
+<Slider label="Disabled" type="main" name="disabled" defaultValue={40} disabled />
+```
+
+### No Label
+
+---
+
+<SliderNoLabel />
+
+```tsx
+<Slider label="Hidden" type="main" name="nolabel" noLabel />
+```
+
+### Custom Background
+
+---
+
+<SliderCustomBackground />
+
+```tsx
+<Slider
+    label="Custom color"
+    type="main"
+    name="custom"
+    backgroundColor="#05EB57"
+    defaultValue={60}
+/>
+```
+
+### Styles
+
+---
+
+<SliderStyles />
+
+```tsx
+<Slider label="Dark style" type="main" name="dark" sliderStyle="dark" />
+
+<Slider label="Light style" type="main" name="light" sliderStyle="light" />
+```
+
+## 🔧 Props
+
+| Prop                  | Type                                                  | Default     | Description                                                  |
+| --------------------- | ----------------------------------------------------- | ----------- | ------------------------------------------------------------ |
+| **`label`**           | `string`                                              | —           | Label text for the slider.                                   |
+| **`type`**            | `"main" \| "inline"`                                  | —           | Layout variant of the slider.                                |
+| **`name`**            | `string`                                              | —           | Name attribute for the input element.                        |
+| **`min`**             | `number`                                              | `0`         | Minimum value.                                               |
+| **`max`**             | `number`                                              | `100`       | Maximum value.                                               |
+| **`step`**            | `number`                                              | `1`         | Step interval between values.                                |
+| **`defaultValue`**    | `number`                                              | `0`         | Initial value when used as an uncontrolled component.        |
+| **`value`**           | `number`                                              | `undefined` | Controlled value.                                            |
+| **`noLabel`**         | `boolean`                                             | `undefined` | Hides the label when true.                                   |
+| **`showValue`**       | `boolean`                                             | `true`      | Displays the current value when true.                        |
+| **`backgroundColor`** | `string`                                              | `undefined` | Custom background color for the slider track.                |
+| **`sliderStyle`**     | `"dark" \| "light"`                                   | `"dark"`    | Applies a light or dark theme to the component.              |
+| **`disabled`**        | `boolean`                                             | `false`     | Disables interaction with the slider.                        |
+| **`className`**       | `string`                                              | `undefined` | Adds additional CSS classes for custom styling.              |
+| **`onChange`**        | `(e: React.ChangeEvent<HTMLInputElement>) => void`    | `undefined` | Callback fired when the slider value changes.                |

@@ -1,0 +1,120 @@
+import {
+    ProgressBarDefault,
+    ProgressBarWithLabel,
+    ProgressBarShowValue,
+    ProgressBarComplete,
+    ProgressBarEmpty,
+    ProgressBarCustomMax,
+    ProgressBarCustomColors,
+    ProgressBarStyles,
+} from "../../../app/_components/progressBarDemo";
+
+# ProgressBar
+
+The **ProgressBar** component is a pixel-art styled visual progress indicator.  
+It supports labels, value display, custom max values, and customizable colors — ideal for loading states, step indicators, and progress tracking with a retro aesthetic.
+
+---
+
+## 🚀 Usage
+
+### Basic Example
+
+---
+
+<ProgressBarDefault />
+
+```tsx
+import { ProgressBar } from "pixelartui-react";
+
+<ProgressBar value={50} />
+```
+
+### With Label
+
+---
+
+<ProgressBarWithLabel />
+
+```tsx
+<ProgressBar value={65} label="Loading..." />
+```
+
+### Show Value
+
+---
+
+<ProgressBarShowValue />
+
+```tsx
+<ProgressBar value={75} showValue />
+```
+
+### Complete
+
+---
+
+<ProgressBarComplete />
+
+```tsx
+<ProgressBar value={100} label="Complete" showValue />
+```
+
+### Empty
+
+---
+
+<ProgressBarEmpty />
+
+```tsx
+<ProgressBar value={0} />
+```
+
+### Custom Max
+
+---
+
+<ProgressBarCustomMax />
+
+```tsx
+<ProgressBar value={3} max={5} label="Steps" showValue />
+```
+
+### Custom Colors
+
+---
+
+<ProgressBarCustomColors />
+
+```tsx
+<ProgressBar
+    value={60}
+    backgroundColor="#1a1a2e"
+    fillColor="#05EB57"
+    showValue
+/>
+```
+
+### Styles
+
+---
+
+<ProgressBarStyles />
+
+```tsx
+<ProgressBar value={40} progressBarStyle="dark" label="Dark" />
+<ProgressBar value={40} progressBarStyle="light" label="Light" />
+```
+
+## 🔧 Props
+
+| Prop                     | Type               | Default     | Description                                                  |
+| ------------------------ | ------------------ | ----------- | ------------------------------------------------------------ |
+| **`value`**              | `number`           | —           | Current progress value.                                      |
+| **`max`**                | `number`           | `100`       | Maximum value for the progress bar.                          |
+| **`label`**              | `string`           | `undefined` | Label text displayed alongside the progress bar.             |
+| **`showValue`**          | `boolean`          | `false`     | Displays the numeric progress value.                         |
+| **`progressBarStyle`**   | `"dark" \| "light"` | `undefined` | Applies a light or dark theme to the component.            |
+| **`backgroundColor`**    | `string`           | `undefined` | Overrides the default background color.                      |
+| **`fillColor`**          | `string`           | `undefined` | Overrides the default fill color of the progress indicator.  |
+| **`className`**          | `string`           | `undefined` | Adds additional CSS classes for custom styling.              |
